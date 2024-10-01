@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hearthstone Card Search</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Hearthstone Card Search</a>
+    </nav>
+
+    <main class="container mt-4">
+      <h1 class="text-center mb-4">Search for Cards</h1>
+
+      <!-- Search Form -->
+      <form action="/search" method="get" class="mb-5">
+        <div class="form-group">
+          <label for="searchInput">Card Name</label>
+          <input
+            type="text"
+            name="q"
+            id="searchInput"
+            class="form-control"
+            placeholder="Enter card name"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+
+      <!-- Filter Form -->
+      <h2 class="text-center mb-4">Filter Cards</h2>
+      <form id="filterForm" class="mb-5">
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="setSelect">Set</label>
+            <select id="setSelect" name="set" class="form-control">
+              <option value="">Any</option>
+              <!-- Options will be populated dynamically -->
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="typeSelect">Type</label>
+            <select id="typeSelect" name="type" class="form-control">
+              <option value="">Any</option>
+              <!-- Options will be populated dynamically -->
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="classSelect">Class</label>
+            <select id="classSelect" name="className" class="form-control">
+              <option value="">Any</option>
+              <!-- Options will be populated dynamically -->
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="costSelect">Cost</label>
+            <select id="costSelect" name="cost" class="form-control">
+              <option value="">Any</option>
+              <!-- Options will be populated dynamically -->
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success">Filter</button>
+      </form>
+
+      <!-- Results Section -->
+      <div id="results">
+        <!-- Results will be displayed here -->
+      </div>
+    </main>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>

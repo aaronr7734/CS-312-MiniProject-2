@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.btn {
+  min-width: 100px;
+}
